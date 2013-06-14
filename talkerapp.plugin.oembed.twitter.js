@@ -6,7 +6,7 @@ plugin.onMessageInsertion = function(event){
 
   if (twitter_status_expression.test(last_href)){
     var id = last_href.match(twitter_status_expression)[1];
-    var url = 'https://api.twitter.com/1/statuses/oembed.json?id=' + id + '&align=center&callback=?';
+    var url = 'http://api.twitter.com/1/statuses/oembed.json?id=' + id + '&align=center&callback=?';
     
     if (last_anchor.hasClass('transformed')){
       return true; // Do not transform the link a second time.
