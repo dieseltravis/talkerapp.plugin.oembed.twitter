@@ -21,4 +21,4 @@ plugin.onMessageInsertion = function(event){
       }
     });
   }
-}
+};
