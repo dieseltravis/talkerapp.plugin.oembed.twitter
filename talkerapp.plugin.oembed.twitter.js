@@ -1,7 +1,6 @@
 plugin.onMessageInsertion = function(event){
-  var twitter_status_expression = /https*:\/\/twitter.com\/(?:#!\/)?\w+\/statuse?s?\/(\d+)/i;
+  var twitter_status_expression = /^https?:\/\/twitter.com\/(?:#!\/)?\w+\/status(?:es)?\/(\d+)/i;
   var last_anchor = Talker.getLastInsertion().find('a');
-
   var last_href = last_anchor.attr('href') || '';
 
   if (twitter_status_expression.test(last_href)){
